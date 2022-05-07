@@ -1,0 +1,399 @@
+/*import FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Roboto Slab', serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+/* font-family: 'Suez One', serif; */
+
+/*BASE SETTINGS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+} /*обнуление: отступы внутрь блока, отступы от объекта, границы объекта*/
+
+body, html {
+    width: 100%;
+    height: 100%;
+} /*параметры блоков: ширина и высота на весь экран*/
+
+body {
+    background-color: #fff;
+    font-family: Trebuchet MS, Helvetica;
+} /*параметры блока: цвет фона и шрифт по умолчанию (на случай отсутствия тематических шрифтов)*/
+
+/* HEADER - шапка сайта*/
+
+header {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+} /*параметры блока header: ширина, отступы, фон, положение с лева, фиксированная позиция*/
+
+header #logo {
+    color: #fff;
+    cursor: pointer;
+} /*цвет текста лого, курсор при наведении*/
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Suez One', serif;
+} /*параметры текста лого: размер шрифта, высота строки, отступ с левого края, шрифт*/
+
+/*изменение стилей при разрешении более 701px*/
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    } /*положение с лева, изменение ширины, размер шрифта logo*/
+
+    #about {
+        float: right;
+        width: 67%;
+    } /*положение с права и изменение ширины меню*/
+}
+
+/*изменение стилей при разрешении менее 700px*/
+@media (max-width: 700px) {
+    #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    } /*отступ с верху, ширина на весь экран, размер шрифта logo*/
+
+    #about {
+        float: left;
+        width: 100%;
+    } /*положение с лева и ширина меню на весь экран*/
+}
+
+#about {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 10px;
+} /*стиль меню в header'е: положение по центру, размер шрифта, толщина шрифта, высота строки, отступ от края блока */
+
+
+#about > a {color: #fff} /*стиль текста меню в header'е*/
+
+#about > a:hover {
+    color: #b0b0b0;
+    text-decoration: underline;
+} /*стиль для текста меню в header'е при наведении*/
+
+#about > a:not(last-child) {
+    margin-right: 7%;
+} /*отступы для наименований в меню header'a*/
+
+.fixed {
+    z-index: 5000;
+    background: #fff;
+    border-bottom: 1px solid silver;
+} /*стиль для header'a при скроле*/
+
+header.fixed #logo {
+    color: #343434;
+} /*цвет текста для лого при скроле*/
+
+.fixed #about a {
+    color: #343434;
+    font-weight: 600;
+} /*цвет текста для header'a при скроле*/
+.fixed #about a:hover {color: #7c7c7c} /*цвет текста для header'a при скроле и наведении*/
+
+/* Главный блок на сайте */
+
+#top {
+    width: 100%;
+    /* height: 1000px; */
+    background-image: url(../images/mac-book-air1.jpg);
+    background-blend-mode: multiply; /* наложить фон (цвет) на картинку*/
+    background-color: #216095; /* цвет наложенного фона */
+    background-size: cover; /* растянуть картинку на всю ширину экрана */
+    text-align: center;
+    color: #fff;
+    font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 861px) {
+    #top {
+        font-size: 2.3em;
+        padding-top: 5%;
+    }
+}
+
+@media (max-width: 860px) and (min-width: 701px) {
+    #top {
+        font-size: 2em;
+        padding-top: 10%;
+        height: 750px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 531px) {
+    #top {
+        font-size: 1.5em;
+        padding-top: 18%;
+    }
+}
+
+@media (max-width: 530px) and (min-width: 341px) {
+    #top {
+        font-size: 1em;
+        padding-top: 30%;
+    }
+}
+
+@media (max-width: 340px) {
+    #top {
+        font-size: 0.7em;
+        padding-top: 40%;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: #ccc;
+}
+
+/* Блок с возможностями */
+
+#main {
+    padding: 100px 20%;
+    width: 60%;
+    float: left;
+    background-color: #f6f6f6;
+    border-top: 2px solid silver;
+    color: #484848;
+    font-size: 1.3em;
+}
+
+@media (min-width: 1401px) {
+    #main {
+        padding: 100px 20%;
+        width: 60%;
+    }
+}
+
+@media (max-width: 1400px) {
+    #main {
+        padding: 100px 10%;
+        width: 80%;
+    }
+}
+
+/* трансформация блока в один ряд */
+
+@media (max-width: 700px) {
+    #main div {
+        width: 98%!important;
+        margin-bottom: 20px;
+    }
+}
+
+#main div {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+}
+
+#main h2 {font-size: 3em}
+
+#main span {color: #a0a0a0;}
+
+/* Блок с преимуществами */
+
+#overview {
+    float: left;
+    background-image: url(../images/bg1.jpg);
+
+    background-blend-mode: multiply;
+    background-color: #4f1c75;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview h2 {font-size: 4em}
+
+#overview h4 {
+    color: #ccc;
+    font-size: 1.5em;
+}
+
+#overview .img {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd) {
+    margin-left: 18%;
+}
+
+#overview img {
+    background: #fafafa;
+    padding: 5px;
+    border: 2px solid silver;
+    float: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+#overview span {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #overview .img {
+        width: 80%!important;
+        margin-right: 0!important;
+        margin-left: 10%!important;
+    }
+}
+
+/* Блок с контактами*/
+
+#contacts {
+    width: 100%;
+    float: left;
+    padding-bottom: 40px;
+    padding-top: 70px;
+    border-top: 4px solid #ccc;
+    background: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+
+#contacts h5 {
+    font-size: 3em;
+    color: #4f4f4f;
+}
+
+#form_input {
+    margin-top: 15px;
+    width: 35%;
+    margin-left: 38%;
+    font-size: 1.1em;
+} /* параметры блока ввода */
+
+#form_input label {
+    color: #505050;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+} /* настройки 'названий' блоков ввода */
+
+#form_input label span {
+    color: #e87e7e;
+} /* цвет звездочки */
+
+#form_input input,#form_input textarea {
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 10px 2%;
+    border-radius: 7px;
+    border: 2px solid silver;
+    font-size: 0.9em;
+    color: #4a4a4a;
+} /* настройки 'форм' и 'описания' в блоке ввода */
+
+#form_input input:focus, #form_input textarea:focus {
+    border-color: #333;
+} /* обводка формы при заполнении */
+
+.btn {
+    float: left;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #ec6550;
+    text-shadow: #454545 0 0 2px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+    background-color: #c15443;
+}
+
+/* Вопросы и ответы */
+
+#faq {
+    background-color: #fff;
+    border-top: 2px dashed #e4e3e3;
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+@media (min-width: 801px) {
+    #faq div {
+        width: 25%;
+        margin-left: 6%;
+        float: left;
+    }
+}
+
+@media (max-width: 800px) {
+    #faq div {
+        width: 80%;
+        margin-left: 10%;
+        float: left;
+    }
+}
+
+#faq .title {
+    font-weight: lighter;
+    color: #a3a0ad;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+#faq .heading {
+    color: #7d7d7d;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+#faq p {
+    font-family: Arimo, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #4a4a4a;
+    font-size: 0.95em;
+    margin-bottom: 40px;
+}
